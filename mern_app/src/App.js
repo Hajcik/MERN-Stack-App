@@ -6,10 +6,11 @@ import { getPosts } from './actions/posts';
 import Posts from './components/Posts/Posts'
 import Form from './components/Form/Form'
 import memories from './images/memories.png';
+import lambda from './images/lambda.png';
 import useStyles from './styles';
 
 const App = () => {
-    const [currentId, setCurrentId] = useState(null);
+    const [currentId, setCurrentId] = useState(0);
     const classes = useStyles();
     const dispatch = useDispatch();
 
@@ -20,8 +21,9 @@ const App = () => {
     return (
         <Container maxidth="lg">
             <AppBar className = {classes.appBar} position="static" color="inherit">
-                <Typography className={classes.heading} variant="h2" align="center">Memories</Typography>
-                <img className={classes.image} src={memories} alt="memories" height="60"/>
+                <img className={classes.image} src={lambda} alt="half-life" height="60"/>
+                <Typography className={classes.heading} variant="h2" align="center">Game Memories</Typography>
+                <img className={classes.image} src={lambda} alt="memories" height="60"/>
             </AppBar>
             <Grow in>
                 <Container>
